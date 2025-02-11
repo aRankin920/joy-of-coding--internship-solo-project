@@ -1,0 +1,122 @@
+/* ---------------------------- */
+/* This CSS sheet provides the  */
+/* form style on the New Task   */
+/* and Edit Task pages.         */
+/* ---------------------------- */
+
+.container{
+    flex-direction: column;
+    width: 100%;
+}
+
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+    display: flex;
+}
+
+.space-x-4 {
+    gap: 1rem;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+/* Label styles */
+label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Input and select styles */
+input[type="text"],
+select {
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #4f94f3;
+    /* Blue color on focus */
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+/* Button styles */
+button {
+    /* background-color: #3d7bd2; */
+    color: darkblue;
+    border-color: darkblue;
+    border: 2px solid darkblue;
+    font-size: 14px;
+    padding: 2px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+    transition: background-color 0.3s ease;
+}
+
+.update_delete_buttons {
+    font-size: 10px;
+    height: 30px;
+    width: 50px;
+    margin-top: 1px;
+}
+
+button:hover {
+    background-color: #3e80c1;
+    /* Darker blue on hover */
+}
+
+button:focus {
+    outline: none;
+}
+
+
+
+
+.items-end {
+    align-items: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .space-x-4 {
+        gap: 0.5rem;
+    }
+}

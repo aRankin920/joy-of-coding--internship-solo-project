@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model task {
+  category    task_category
+  id          Int           @id @default(autoincrement())
+  title       String        @unique(map: "Task_title_key")
+  description String
+}
+
+enum task_category {
+  Work_Related     @map("Work Related")
+  Grocery_Shopping @map("Grocery Shopping")
+  House_Work       @map("House Work")
+  Exercise
+  Dentist
+  Automobile
+  Events
+}
